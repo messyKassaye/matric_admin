@@ -1,0 +1,113 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView
+    android:id="@+id/webviewLayout"
+    android:elevation="5dp"
+    android:layout_marginBottom="20dp"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <LinearLayout
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <!--Header of the view -->
+        <LinearLayout
+            android:id="@+id/header"
+            android:orientation="vertical"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <RelativeLayout
+                android:padding="10dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <TextView
+                    android:layout_width="40dp"
+                    android:layout_height="40dp"
+                    android:textSize="20sp"
+                    android:background="@drawable/circle"
+                    android:textColor="@android:color/white"
+                    android:gravity="center"
+                    android:id="@+id/tutorial_image" />
+
+                <LinearLayout
+                    android:id="@+id/innerHeader"
+                    android:layout_toRightOf="@id/tutorial_image"
+                    android:orientation="vertical"
+                    android:layout_marginLeft="10dp"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+                    <TextView
+                        android:id="@+id/tutorialTitle"
+                        android:textStyle="bold"
+                        android:textSize="18sp"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"/>
+                    <LinearLayout
+                        android:orientation="horizontal"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content">
+
+                        <TextView
+                            android:id="@+id/subjectName"
+                            android:textColor="@android:color/darker_gray"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"/>
+
+                        <TextView
+                            android:id="@+id/tutorialGrade"
+                            android:layout_width="wrap_content"
+                            android:textStyle="bold"
+                            android:padding="5dp"
+                            android:textColor="@android:color/darker_gray"
+                            android:layout_height="wrap_content"/>
+                        <TextView
+                            android:id="@+id/tutorialStream"
+                            android:textColor="@android:color/holo_green_dark"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"/>
+                    </LinearLayout>
+
+                </LinearLayout>
+
+            </RelativeLayout>
+
+            <include layout="@layout/divider"/>
+        </LinearLayout>
+
+        <!-- content of the view -->
+        <LinearLayout
+            android:orientation="vertical"
+            android:id="@+id/contents"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <WebView
+                android:id="@+id/tutorialWebView"
+                android:visibility="gone"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+            </WebView>
+        </LinearLayout>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:padding="10dp"
+            android:layout_height="wrap_content">
+            <Button
+                android:id="@+id/downloadTutorial"
+                android:layout_alignParentRight="true"
+                android:paddingLeft="20dp"
+                android:paddingRight="20dp"
+                android:text="Download"
+                android:textColor="@android:color/white"
+                android:background="@color/colorPrimary"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"/>
+        </RelativeLayout>
+
+    </LinearLayout>
+</androidx.cardview.widget.CardView>
